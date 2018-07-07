@@ -1,0 +1,254 @@
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: #dff9fb;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #95afc0;
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #535c68;
+}
+
+body {
+	font-family: 'Muli', sans-serif;
+	color: #130f40;
+	line-height: 1.85;
+	font-size: 18px;
+}
+
+#navbar {
+	transition: all .3s;
+}
+
+.sticky-navbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#navbar.fixed-top {
+	background-color: #130f40;
+}
+
+#landing {
+	min-height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(img/landing.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+#landing .container,
+#landing .row {
+	height: 100%;
+}
+
+#landing h1 {
+	font-size: 64px;
+	font-weight: 900;
+	text-align: center;
+	color: #fff;
+	background: linear-gradient(rgba(240, 147, 43, .7), rgba(240, 147, 43, .7));
+}
+
+.btn-outline-primary {
+	border: 1px solid #f0932b;
+	color: #f0932b;
+}
+
+.btn-outline-primary:hover {
+	border: 1px solid transparent;
+	background: linear-gradient(rgba(240, 147, 43, .7), rgba(240, 147, 43, .7));
+	color: #fff;
+}
+
+h2 {
+	font-size: 48px;
+	font-weight: 900;
+	text-align: center;
+}
+
+h2::after {
+	content: "";
+	display: block;
+	width: 20%;
+	height: 5px;
+	background-color: #130f40;
+	margin: 0 auto;
+	margin-top: 16px;
+}
+
+#footer h2::after {
+	background-color: #fff;
+}
+
+.bio-content p,
+.skills p,
+.contact-info p {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 20px 0;
+	padding: 0;
+	font-size: 22px;
+}
+
+.bio-content .fa,
+.skills .fa,
+.contact-info .fa {
+	background-color: #f0932b;
+	color: #fff;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 8px;
+}
+
+.skills .fa {
+	background-color: #6ab04c;
+}
+
+.contact-info .fa {
+	background-color: #f9ca24;
+}
+
+#work,
+#skills {
+	background-color: #f3f3f3;
+}
+
+h3 {
+	font-weight: 700;
+}
+
+.work-experience .fa-briefcase,
+.education .fa-graduation-cap {
+	color: #fff;
+	width: 50px;
+	height: 50px;
+	font-size: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-left: 12px !important;
+}
+
+.work-experience .fa-briefcase {
+	background-color: #be2edd;
+}
+
+.work-experience .fa-check {
+	color: #be2edd;
+}
+
+.organization {
+	color: #be2edd;
+}
+
+.duration,
+.year {
+	color: #30336b;
+}
+
+.education .fa-graduation-cap {
+	background-color: #22a6b3;
+}
+
+.education .fa-graduation-cap::after,
+.work-experience .fa-briefcase::after {
+	content: "";
+	display: block;
+	height: 100px;
+	width: 3px;
+	transform: translate(-15px, 75px);
+}
+
+.education .fa-graduation-cap::after {
+	background-color: #22a6b3;
+}
+
+.work-experience .fa-briefcase::after {
+	height: 220px;
+	transform: translate(-12px, 135px);
+	background-color: #be2edd;
+}
+
+.institution {
+	color: #22a6b3;
+}
+
+#footer {
+	background-color: #535c68;
+	color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+	#landing {
+		height: 100vh;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	body {
+		font-size: 16px;
+	}
+	#landing h1 {
+		font-size: 48px;
+	}
+	h2 {
+		font-size: 40px;
+	}
+	h3 {
+		font-size: 32px;
+	}
+	.bio-content p,
+	.skills p,
+	.contact-info p {
+		font-size: 18px;
+	}
+	.work-experience .fa-briefcase,
+	.education .fa-graduation-cap {
+		padding-left: 8px !important;
+	}
+	.education .fa-graduation-cap::after,
+	.work-experience .fa-briefcase::after {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#landing h1 {
+		margin-top: 50px;
+		font-size: 40px;
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	.bio-content p,
+	.skills p,
+	.contact-info p {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	.bio-content .fa,
+	.skills .fa,
+	.contact-info .fa {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+}
